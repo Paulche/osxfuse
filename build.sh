@@ -1706,9 +1706,6 @@ function m_handler_smalldist()
     ln -s libosxfuse_i64.la "$ms_osxfuse_root/usr/local/lib/libosxfuse.la"
     m_exit_on_error "cannot create symlink '$ms_osxfuse_root/usr/local/lib/libosxfuse.la' -> 'libosxfuse_i64.la'."
 
-    ln -s osxfuse.pc "$ms_osxfuse_root/usr/local/lib/pkgconfig/fuse.pc"
-    m_exit_on_error "cannot create symlink '$ms_osxfuse_root/usr/local/lib/pkgconfig/fuse.pc' -> 'osxfuse.pc'."
-
     # Generate dSYM bundles
     xcrun dsymutil "$ms_osxfuse_root"/usr/local/lib/libosxfuse_i32.dylib
     m_exit_on_error "cannot generate debugging information for libosxfuse_i32."
